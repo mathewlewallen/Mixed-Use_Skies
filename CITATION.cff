@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+title: "Mixed-Use Skies: Dynamic Risk Cells and Performance-Contracted Integration of Spacecraft into Global Air Traffic"
+message: "If you use this software, then please cite it."
+type: software
+authors:
+  - family-names: Lewallen
+    given-names: Mathew J.
+version: "1.0.0"
+repository-code: https://github.com/mathewlewallen/Mixed-Use_Skies
+doi: 10.5281/zenodo.16881670
+license: Apache-2.0

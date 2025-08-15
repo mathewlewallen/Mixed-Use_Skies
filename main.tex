@@ -34,6 +34,9 @@
 \newcommand{\AIXM}{\textsc{AIXM}}
 \newcommand{\SWIM}{\textsc{SWIM}}
 \newcommand{\SDI}{\textsc{SDI}}
+\newcommand{\repoURL}{https://github.com/mathewlewallen/Mixed-Use_Skies}
+\newcommand{\repoCommit}{a6d8b60}                
+\newcommand{\repoDOI}{10.5281/zenodo.16881670} 
 
 \title{Mixed-Use Skies: Dynamic Risk Cells and Performance-Contracted Integration of Spacecraft into Global Air Traffic}
 
@@ -452,8 +455,7 @@ Dynamic airspace configuration and risk-informed hazard areas have been explored
 This study demonstrated the \DRC{} concept in simulation; full operational deployment will require iterative testing with stakeholders. We assumed reliable vehicle telemetry, which are loss of signal or an unpredicted breakup would require reversion to static containment. The HMI evaluation, while encouraging, was a limited simulation; live trials with controllers are needed to uncover any human factors issues. We also did not address multi-launch or simultaneous operations, which present challenges in deconflicting overlapping hazard volumes. Future work includes shadow-mode trials with ANSPs, adaptation to reentry from orbital trajectories (with longer lead times), and integration of \DRC{} outputs into traffic flow management decision support tools.
 
 \section*{Data and Code Availability}
-All data generated or analyzed during this study are available within this article. The code for hazard area computation (authalic sphere geometry), the \DRC{} generation software, and example replay bundles are provided in a public repository \textbf{}. Additional launch event data were obtained from FAA reports and press releases\cite{FAA_SDI_2021,FAA_SDI_2024} and are included in the repository documentation.
-
+All figures and results in this article are reproducible from the public archive at \href{https://doi.org/\repoDOI}{doi:\repoDOI}. The archive includes: source code for hazard area computation (authalic-sphere geometry), \DRC{} generation software, figure scripts, signed replay bundles, and analysis notebooks. A live development mirror is also available at \href{\repoURL}{\repoURL} (release/tag \texttt{\repoCommit}). FAA SDI program statements cited herein are from official FAA sources.\cite{FAA_SDI_2021,FAA_SDI_2024}
 \section*{Ethics Statement}
 This work involved no live human subjects or personally identifiable data. The simulated controller study was conducted with informed consent under institutional review, and no sensitive information is disclosed. The proposed concept is intended to improve safety and efficiency in airspace management; any field deployment would undergo thorough safety assessment and regulatory approval.
 
@@ -588,6 +590,14 @@ P16 & 39 & 5 & 51 & 0.63 & 29 & 0 & 46 & 0.72 \\
 \bibitem{CFR450} Code of Federal Regulations, “14 CFR Part 450: Launch and Reentry Licensing Requirements,” U.S. Government Publishing Office, 2021. Available at \url{https://www.ecfr.gov/current/title-14/part-450}.
 
 \bibitem{FAA_OIG_2023} Department of Transportation Office of Inspector General, “FAA Has Deployed a Prototype System for Monitoring Commercial Space Operations,” Report No. AV2023012, June 21, 2023.
+
+\bibitem{LewallenDRC_GitHub}
+Lewallen, M. J., ``DRC Risk Cells: Reference Implementation and Figure Generators (v1.0.0),'' GitHub repository, YEAR.
+Available at \url{\repoURL}, commit/tag \texttt{\repoCommit} (accessed Aug. 2025).
+
+\bibitem{LewallenDRC_Zenodo}
+Lewallen, M. J., ``DRC Risk Cells: Reference Implementation and Figure Generators (v1.0.0),'' Zenodo, YEAR.
+doi:\href{https://doi.org/\repoDOI}{\repoDOI}.
 
 \end{thebibliography}
 \end{document}
