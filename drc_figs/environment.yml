@@ -1,0 +1,15 @@
+name: drc_figs
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - matplotlib
+  - pandas
+  - numpy
+  - scikit-learn
+  - shapely>=2.0
+  - graphviz
+  - pip
+  - pip:
+      - graphviz
+  - cartopy

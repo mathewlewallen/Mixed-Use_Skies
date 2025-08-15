@@ -1,0 +1,27 @@
+digraph DRC {
+  rankdir=LR; splines=ortho; nodesep=0.6; ranksep=0.7;
+  node [shape=roundrect, style=filled, fillcolor="#f3f4f6", color="#111827", penwidth=1.2, fontsize=12];
+
+  Ingest [label="Ingest"];
+  TIU [label="TIU / UKF\n(P99 ≤ 0.5 s)"];
+  ADHE [label="ADHE\n(P99 ≤ 0.5 s)"];
+  Poly [label="Polygonize / Simplify\n(P99 ≤ 0.4 s)"];
+  Pub [label="Sign / Publish\n(P99 ≤ 0.3 s)"];
+
+  Ingest -> TIU [label="telemetry"];
+  TIU -> ADHE [label="state dist."];
+  ADHE -> Poly [label="hazard field"];
+  Poly -> Pub [label="DRC slice"];
+
+  subgraph cluster_ops {
+    label="Monitors • Rollback • Immutable Replay";
+    style=dashed; color="#6b7280"; fontsize=11;
+    L [label="Liveness/Latency"]; C [label="Calibration"]; K [label="Containment"]; W [label="Watchdog"];
+    {rank=same; L; C; K; W;}
+  }
+
+  Ingest -> L [style=dotted, color="#6b7280"];
+  TIU -> C [style=dotted, color="#6b7280"];
+  Poly -> K [style=dotted, color="#6b7280"];
+  Pub -> W [style=dotted, color="#6b7280"];
+}

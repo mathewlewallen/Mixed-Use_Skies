@@ -1,0 +1,32 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "callsign": "EXAMPLE1"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -81.0,
+            28.2
+          ],
+          [
+            -80.6,
+            28.4
+          ],
+          [
+            -80.0,
+            28.6
+          ],
+          [
+            -79.5,
+            28.9
+          ]
+        ]
+      }
+    }
+  ]
+}
